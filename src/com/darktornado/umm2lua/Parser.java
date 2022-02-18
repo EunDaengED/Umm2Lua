@@ -38,7 +38,7 @@ public class Parser {
     
     private String intmultiply (String str) {
     	String result = str;
-    	Pattern pattern = Pattern.compile("(.*)([0-9])\\*([0-9])");
+    	Pattern pattern = Pattern.compile("(.*)([0-9]+)\\*([0-9]+)");
     	Matcher matcher = pattern.matcher(result);
     	while(matcher.find()){    // 정규식과 매칭되는 값이 있으면
     	    result = matcher.group(1).trim()+Integer.parseInt(matcher.group(2).trim())*Integer.parseInt(matcher.group(3).trim());        // 특정 단어 사이의 값을 추출한다
